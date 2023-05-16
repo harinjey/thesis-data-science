@@ -100,7 +100,7 @@ xgboost = xgb.XGBRegressor(objective="reg:squarederror",random_state=42)
 params = {
     "gamma": uniform(0, 0.5),
     "learning_rate": uniform(0.03, 0.3), 
-    "max_depth": randint(2, 6), # default 3
+    "max_depth": randint(2, 6),
     "n_estimators": randint(100, 150)
 }
 
