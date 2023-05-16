@@ -96,6 +96,7 @@ X_train,X_valid, y_train, y_valid = train_test_split(X,y, test_size=0.3, random_
 xgboost = xgb.XGBRegressor(objective="reg:squarederror",random_state=42)
 
 #parameter for tuning
+# Inspired by: https://github.com/yvasandvik/data-science-thesis/blob/master/method/xgb-tuning-model.ipynb
 params = {
     "gamma": uniform(0, 0.5),
     "learning_rate": uniform(0.03, 0.3), 
