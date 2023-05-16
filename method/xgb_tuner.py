@@ -100,8 +100,8 @@ xgboost = xgb.XGBRegressor(objective="reg:squarederror",random_state=42)
 params = {
     "gamma": uniform(0, 0.5),
     "learning_rate": uniform(0.03, 0.3), 
-    "max_depth": [8,10, 12, 14], 
-    "n_estimators": [500, 600, 800, 900] 
+    "max_depth": randint(2, 6), # default 3
+    "n_estimators": randint(100, 150)
 }
 
 xgb_random = RandomizedSearchCV(xgboost, param_distributions=params, random_state=42, n_iter=10, cv=3, verbose=1, n_jobs=-1, return_train_score=True)
