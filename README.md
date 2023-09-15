@@ -1,1 +1,1 @@
-# thesis-data-science
+# Data Science Thesis 2023
